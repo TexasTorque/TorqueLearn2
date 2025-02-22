@@ -36,7 +36,6 @@
                 <h2 class="largeTopicHeader">Coding</h2>
                 <div> <!-- Coding -->
                     <button onclick="changeText('Coding Basic Auto Setup')" class="sideButton">Basic Auto Setup</button><br>
-                    <button onclick="changeText('Coding Teleop Drivebase')" class="sideButton">Teleop Drivebase</button><br>
                     <button onclick="changeText('Coding Coding Standards')" class="sideButton">Coding Standards</button><br>
                     <button onclick="changeText('Coding Digital IO')" class="sideButton">Digital IO</button><br>
                     <button onclick="changeText('Coding Jacks Plan for Success')" class="sideButton">Jack's Plan for Success</button><br>
@@ -110,9 +109,9 @@
                 <button onclick="changeText('Featured')" class="sideButton" style="margin-left: 20px">Featured</button><br>
                 <button onclick="changeText('Getting Started')" class="sideButton" style="margin-left: 20px">Getting Started</button><br>
             </td>
-            <td style="padding-left: 2%; padding-right: 2%; padding-top: 1;">    
-                <h3 id="topicHeader">Torque Learn</h3>
-                <p id="topicText">
+            <td style="padding-left: 2%; padding-right: 2%; padding-top: 1; vertical-align: top;">    
+                <h1 id="topicHeader">Torque Learn</h3>
+                <p id="topicText", style="vertical-align: top;">
                     Choose a selection on the side to go to a tab.
                 </p>
             </td>
@@ -121,6 +120,7 @@
 </body> 
 
 <script src="StoredTexts/CAD.js"></script>
+<script src="StoredTexts/coding.js"></script>
 
 <script>
     function changeText(id) {
@@ -158,35 +158,31 @@
             // Coding
             case "Coding Basic Auto Setup":
                 document.getElementById("topicHeader").innerHTML = "Coding Basic Auto Setup";
-                document.getElementById("topicText").innerHTML = "Content for Coding Basic Auto Setup.";
-                break;
-            case "Coding Teleop Drivebase":
-                document.getElementById("topicHeader").innerHTML = "Coding Teleop Drivebase";
-                document.getElementById("topicText").innerHTML = "Content for Coding Teleop Drivebase.";
+                document.getElementById("topicText").innerHTML = coding.basic_auto_setup.join("");
                 break;
             case "Coding Coding Standards":
                 document.getElementById("topicHeader").innerHTML = "Coding Standards";
-                document.getElementById("topicText").innerHTML = "Content for Coding Standards.";
+                document.getElementById("topicText").innerHTML = coding.coding_standards.join("");
                 break;
             case "Coding Digital IO":
                 document.getElementById("topicHeader").innerHTML = "Coding Digital IO";
-                document.getElementById("topicText").innerHTML = "Content for Coding Digital IO.";
+                document.getElementById("topicText").innerHTML = coding.digital_io.join("");
                 break;
             case "Coding Jacks Plan for Success":
                 document.getElementById("topicHeader").innerHTML = "Jack's Plan for Success";
-                document.getElementById("topicText").innerHTML = "Content for Jack's Plan for Success.";
+                document.getElementById("topicText").innerHTML = coding.jacks_plan_for_success.join("");
                 break;
             case "Coding Network Tables":
                 document.getElementById("topicHeader").innerHTML = "Coding Network Tables";
-                document.getElementById("topicText").innerHTML = "Content for Coding Network Tables.";
+                document.getElementById("topicText").innerHTML = coding.network_tables.join("");
                 break;
             case "Coding Project Structure":
                 document.getElementById("topicHeader").innerHTML = "Coding Project Structure";
-                document.getElementById("topicText").innerHTML = "Content for Coding Project Structure.";
+                document.getElementById("topicText").innerHTML = coding.project_structure.join("");
                 break;
             case "Coding Style Guide":
                 document.getElementById("topicHeader").innerHTML = "Coding Style Guide";
-                document.getElementById("topicText").innerHTML = "Content for Coding Style Guide.";
+                document.getElementById("topicText").innerHTML = coding.style_guide.join("");
                 break;
             // Control Loop
             case "Control Loop Bang-Bang":
