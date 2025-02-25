@@ -71,13 +71,6 @@
                     <button onclick="changeText('Machining What is CNC')" class="sideButton">What is CNC?</button><br>
                 </div>
 
-                <h2 class="largeTopicHeader">Health/Safety</h2>
-                <div> <!-- Health/Safety -->
-                    <button onclick="changeText('Health/Safety Battery Safety')" class="sideButton">Battery Safety</button><br>
-                    <button onclick="changeText('Health/Safety Posture')" class="sideButton">Posture</button><br>
-                    <button onclick="changeText('Health/Safety Visions and Screens')" class="sideButton">Visions and Screens</button><br>
-                </div>
-
                 <h2 class="largeTopicHeader">Programming Setup</h2>
                 <div> <!-- Setup -->
                     <button onclick="changeText('Programming Setup How to Install FRC Gametools')" class="sideButton">How to Install FRC Gametools</button><br>
@@ -96,7 +89,7 @@
                     </div>
                     <button onclick="changeText('Vendor Limelight')" class="sideButton" style="margin-left: 50px">Limelight</button><br>
                     <button onclick="changeText('Vendor Motor Controllers')" class="sideButton" style="margin-left: 50px">Motor Controllers</button><br>
-                    <button onclick="changeText('Vendor Motors and Motor Types')" class="sideButton" style="margin-left: 50px">Motoros and Motor Types</button><br>
+                    <button onclick="changeText('Vendor Motors and Motor Types')" class="sideButton" style="margin-left: 50px">Motors and Motor Types</button><br>
                     <button onclick="changeText('Vendor Pneumatics and Solenoids')" class="sideButton" style="margin-left: 50px">Pneumatics and Solenoids</button><br>
                     <button onclick="changeText('Vendor RoboRIO')" class="sideButton" style="margin-left: 50px">RoboRIO</button><br>
                     <button onclick="changeText('Vendor Wifi Radio Configuration')" class="sideButton" style="margin-left: 50px">Wifi Radio Configuration</button><br>
@@ -105,9 +98,6 @@
 
                 <button onclick="changeText('Scouting')" class="sideButton" style="margin-left: 20px">Scouting</button><br>
                 <button onclick="changeText('How to Deploy Code to a Robot')" class="sideButton" style="margin-left: 20px">How to Deploy Code to a Robot</button><br>
-                <button onclick="changeText('Coding for FRC')" class="sideButton" style="margin-left: 20px">Coding for FRC</button><br>
-                <button onclick="changeText('Featured')" class="sideButton" style="margin-left: 20px">Featured</button><br>
-                <button onclick="changeText('Getting Started')" class="sideButton" style="margin-left: 20px">Getting Started</button><br>
             </td>
             <td style="padding-left: 2%; padding-right: 2%; padding-top: 1; vertical-align: top;">    
                 <h1 id="topicHeader">Torque Learn</h3>
@@ -121,6 +111,13 @@
 
 <script src="StoredTexts/CAD.js"></script>
 <script src="StoredTexts/coding.js"></script>
+<script src="StoredTexts/ControlLoops.js"></script>
+<script src="StoredTexts/GIT.js"></script>
+<script src="StoredTexts/safety.js"></script>
+<script src="StoredTexts/machining.js"></script>
+<script src="StoredTexts/misc.js"></script>
+<script src="StoredTexts/programmingSetup.js"></script>
+<script src="StoredTexts/vendor.js"></script>
 
 <script>
     function changeText(id) {
@@ -187,121 +184,117 @@
             // Control Loop
             case "Control Loop Bang-Bang":
                 document.getElementById("topicHeader").innerHTML = "Control Loop Bang-Bang";
-                document.getElementById("topicText").innerHTML = "Content for Control Loop Bang-Bang.";
+                document.getElementById("topicText").innerHTML = controlLoops.bang_bang.join("");
                 break;
             case "Control Loop Feed Forward":
                 document.getElementById("topicHeader").innerHTML = "Control Loop Feed Forward";
-                document.getElementById("topicText").innerHTML = "Content for Control Loop Feed Forward.";
+                document.getElementById("topicText").innerHTML = controlLoops.feed_forward.join("");
                 break;
             case "Control Loop PID":
                 document.getElementById("topicHeader").innerHTML = "Control Loop PID";
-                document.getElementById("topicText").innerHTML = "Content for Control Loop PID.";
+                document.getElementById("topicText").innerHTML = controlLoops.pid.join("");
                 break;
             // Git Use
             case "Git Use How to clone a repo":
                 document.getElementById("topicHeader").innerHTML = "How to Clone a Repo";
-                document.getElementById("topicText").innerHTML = "Content for How to Clone a Repo.";
+                document.getElementById("topicText").innerHTML = git.how_to_clone.join("");
                 break;
             case "Git Use How to use vscode":
                 document.getElementById("topicHeader").innerHTML = "How to use VSCode";
-                document.getElementById("topicText").innerHTML = "Content for How to use VSCode.";
+                document.getElementById("topicText").innerHTML = git.vscode_git.join("");
                 break;
             case "Git Use Introductory Git":
                 document.getElementById("topicHeader").innerHTML = "Introductory Git";
-                document.getElementById("topicText").innerHTML = "Content for Introductory Git.";
+                document.getElementById("topicText").innerHTML = git.git_introduction.join("");
                 break;
             // Health/Safety
             case "Health/Safety Battery Safety":
                 document.getElementById("topicHeader").innerHTML = "Battery Safety";
-                document.getElementById("topicText").innerHTML = "Content for Battery Safety.";
+                document.getElementById("topicText").innerHTML = safety.battery_safety.join("");
                 break;
             case "Health/Safety Posture":
                 document.getElementById("topicHeader").innerHTML = "Posture";
-                document.getElementById("topicText").innerHTML = "Content for Posture.";
+                document.getElementById("topicText").innerHTML = safety.posture_guide.join("");
                 break;
             case "Health/Safety Visions and Screens":
                 document.getElementById("topicHeader").innerHTML = "Visions and Screens";
-                document.getElementById("topicText").innerHTML = "Content for Visions and Screens.";
+                document.getElementById("topicText").innerHTML = safety.vision_and_screens.join("");
                 break;
             // Machining
             case "Machining Tormach Door Replacement":
                 document.getElementById("topicHeader").innerHTML = "Tormach Door Replacement";
-                document.getElementById("topicText").innerHTML = "Content for Tormach Door Replacement.";
+                document.getElementById("topicText").innerHTML = machining.tormach_door_replacement.join("");
                 break;
             case "Machining What is CNC":
                 document.getElementById("topicHeader").innerHTML = "What is CNC?";
-                document.getElementById("topicText").innerHTML = "Content for What is CNC?.";
+                document.getElementById("topicText").innerHTML = machining.cnc_machining_info.join("");
                 break;
             // Programming Setup
             case "Programming Setup How to Install FRC Gametools":
                 document.getElementById("topicHeader").innerHTML = "How to Install FRC Gametools";
-                document.getElementById("topicText").innerHTML = "Content for How to Install FRC Gametools.";
+                document.getElementById("topicText").innerHTML = programmingSetup.frc_gametools_guide.join("");
                 break;
             case "Programming Setup How to Install WPILib":
                 document.getElementById("topicHeader").innerHTML = "How to install WPILib";
-                document.getElementById("topicText").innerHTML = "Content for How to install WPILib.";
+                document.getElementById("topicText").innerHTML = programmingSetup.wpilib_tools_guide.join("");
                 break;
             case "Programming Setup How to install VSCode":
                 document.getElementById("topicHeader").innerHTML = "How to install VSCode";
-                document.getElementById("topicText").innerHTML = "Content for How to install VSCode.";
+                document.getElementById("topicText").innerHTML = programmingSetup.vscode_guide.join("");
                 break;
             case "Programming Setup How to use Liveshare":
                 document.getElementById("topicHeader").innerHTML = "How to use Liveshare";
-                document.getElementById("topicText").innerHTML = "Content for How to use Liveshare.";
+                document.getElementById("topicText").innerHTML = programmingSetup.liveshare.join("");
                 break;
             // Vendor
             case "Arduino Controlling a 4 pin LED Strip":
                 document.getElementById("topicHeader").innerHTML = "Controlling a 4 pin LED Strip";
-                document.getElementById("topicText").innerHTML = "Content for Controlling a 4 pin LED Strip.";
+                document.getElementById("topicText").innerHTML = vendor.arduino.pin4LED.join("");
                 break;
             case "Arduino Controlling an Adata NeoPixel":
                 document.getElementById("topicHeader").innerHTML = "Controlling an Adata NeoPixel";
-                document.getElementById("topicText").innerHTML = "Content for Controlling an Adata NeoPixel.";
+                document.getElementById("topicText").innerHTML = vendor.arduino.adata_neopixel.join("");
                 break;
             case "Arduino Starting Arduino":
                 document.getElementById("topicHeader").innerHTML = "Starting Arduino";
-                document.getElementById("topicText").innerHTML = "Content for Starting Arduino.";
+                document.getElementById("topicText").innerHTML = vendor.arduino.starting_arduino.join("");
                 break;
             case "Vendor Limelight":
                 document.getElementById("topicHeader").innerHTML = "Limelight";
-                document.getElementById("topicText").innerHTML = "Content for Limelight.";
+                document.getElementById("topicText").innerHTML = vendor.limelight.join("");
                 break;
             case "Vendor Motor Controllers":
                 document.getElementById("topicHeader").innerHTML = "Motor Controllers";
-                document.getElementById("topicText").innerHTML = "Content for Motor Controllers.";
+                document.getElementById("topicText").innerHTML = vendor.motor_controllers.join("");
                 break;
             case "Vendor Motors and Motor Types":
                 document.getElementById("topicHeader").innerHTML = "Motors and Motor Types";
-                document.getElementById("topicText").innerHTML = "Content for Motors and Motor Types.";
+                document.getElementById("topicText").innerHTML = vendor.motors_and_types.join("");
                 break;
             case "Vendor Pneumatics and Solenoids":
                 document.getElementById("topicHeader").innerHTML = "Pneumatics and Solenoids";
-                document.getElementById("topicText").innerHTML = "Content for Pneumatics and Solenoids.";
+                document.getElementById("topicText").innerHTML = vendor.pneumatics_and_solenoids.join("");
                 break;
             case "Vendor RoboRIO":
                 document.getElementById("topicHeader").innerHTML = "RoboRIO";
-                document.getElementById("topicText").innerHTML = "Content for RoboRIO.";
+                document.getElementById("topicText").innerHTML = vendor.roboRIO.join("");
                 break;
             case "Vendor Wifi Radio Configuration":
                 document.getElementById("topicHeader").innerHTML = "Wifi Radio Configuration";
-                document.getElementById("topicText").innerHTML = "Content for Wifi Radio Configuration.";
+                document.getElementById("topicText").innerHTML = vendor.wifi_configuration.join("");
                 break;
             case "Vendor navX":
                 document.getElementById("topicHeader").innerHTML = "navX";
-                document.getElementById("topicText").innerHTML = "Content for navX.";
+                document.getElementById("topicText").innerHTML = vendor.navX.join("");
                 break;
             // Other
             case "Scouting":
                 document.getElementById("topicHeader").innerHTML = "Scouting";
-                document.getElementById("topicText").innerHTML = "Content for Scouting.";
+                document.getElementById("topicText").innerHTML = misc.scouting.join("");
                 break;
             case "How to Deploy Code to a Robot":
                 document.getElementById("topicHeader").innerHTML = "Deploy and run code on a robot";
-                document.getElementById("topicText").innerHTML = "Deploying and running/controlling code on a robot is typically seen as a daunting task for beginners. However, as you'll soon read, it is not nearly as complicated as it might seem.<br><br>" + 
-                    "The first thing that you should do before you even turn on the robot tso send your code to, is to open the WPILib Command Palette (Click on the white double with the red circle around it) and typing 'Build Robot Code'. What this will do is essentially a compile but with WPILib repos in mind. If your compile fails, check your code to see what is causing your error. This will ensure that you don't waste battery, time on the field, etc. If your code does compile/build succesfully, then you can move onto the next step.<br><br>" +
-                    "The next step is to turn on the robot, go onto the computer with the changed code that had the successful build (It doesn't matter the OS, only that it has Wifi and preferrably isn't hosting a Live Share) and then connecting to the robots Wifi network. It should be 1477_RobotName. Once you get a connection, open up Visual Studio and again, click on the WPILib logo in the top right and type 'Deploy Robot Code'. Once you see a succesful message, you can now disconnect from the robot if you are on a Mac or Linux machine and then connect to the robots Wifi network on your driver station Windows machine. If you do not know what FRC Driver Station is, then you can read the documentation in the 'Install FRC Gametools' file. <br><br>" +
-                    "The way that Torque robots run code is by having the code that it runs be kept on its RoboRio that lives on the robot. When you deploy new code, it overwrites the old code and keeps it in memory. This means that regardless of whether you turn the robot on or off, leave it in storage for 10 years, or use a different driver station computer with the robot than the one that you used to send the code, the robot will always have the code. The driver station computer merely sends controller signals to the robot and the robot itself will then interpret the signals. Ex: Driver Station: 'A Button' Robot: 'A Button' means 'Shoot ball'.<br><br>" +
-                    "From here, all that you need to do is open FRC Driver Station, plug in an XBox controller, go to the USB devices tab on the left side and verify that when you perform inputs on the controller the computer sees them. If the computer is not seeing input, then change the USB port that FRC Driver Station is looking for the controller with. Next, you can go back to the first tab and ensure that all three of the boxes are green. If so, you can shout 'Clear! and either click the Enable button, or simultaneously press the open bracket, close bracket, and backslash key to enable the robot. To disable the robot (Which is something that you should always do before stepping onto the field to mess with or observe the robot), you can either press your Enter button or click the Disable button.";
+                document.getElementById("topicText").innerHTML = misc.deploy_code.join("");
                 break;
             default:
                 document.getElementById("topicHeader").innerHTML = "?????"

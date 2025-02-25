@@ -338,12 +338,11 @@ const coding = {
         "<h2>Contents</h2>",
 
         "<ul>",
-        "<li><a href=\"#file-struture\">File Struture</a></li>",
-        "<li><a href=\"#formatting\">Formatting</a></li>",
-        "<li><a href=\"#naming\">Naming</a></li>",
-        "<li><a href=\"#programming-practices\">Programming Practices</a></li>",
-        "<li><a href=\"#javadoc\">Javadoc</a></li>",
-        "</ul>",
+        "<il>* <a href=\"#file-struture\">File Struture</a></li>",
+        "<il>* <a href=\"#formatting\">Formatting</a></li>",
+        "<il>* <a href=\"#naming\">Naming</a></li>",
+        "<il>* <a href=\"#programming-practices\">Programming Practices</a></li>",
+        "<il>* <a href=\"#javadoc\">Javadoc</a></li>",
 
         "<h2 id=/file-structure>File Struture</h2>",
 
@@ -496,7 +495,6 @@ const coding = {
         "<il>`mName`</il>",
         "<il>`s_name`</il>",
         "<il>`kName`</il>",
-        "</ul>",
 
         "<p>WPILib loves to use the `mInstanceVariable` and `kConstantOrEnum` bullshit, we do not.",
 
@@ -615,9 +613,8 @@ const coding = {
         "<p>At the minimum, Javadoc is present for every public class, and every public or protected member of such a class, with a few exceptions:",
 
         "<ul>",
-        "<li>Javadoc is optional for \"simple, obvious\" members like `getFoo()`, in cases where there really and truly is nothing else worthwhile to say but \"Returns the foo\".</li>",
-        "<li>Javadoc is not always present on a method that overrides a supertype method.</li>",
-        "</ul>",
+        "<il>* Javadoc is optional for \"simple, obvious\" members like `getFoo()`, in cases where there really and truly is nothing else worthwhile to say but \"Returns the foo\".</il>",
+        "<il>* Javadoc is not always present on a method that overrides a supertype method.</il>"
     ]
 
 }
