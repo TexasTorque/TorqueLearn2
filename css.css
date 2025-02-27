@@ -1,0 +1,68 @@
+.header {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+/* Sidebar:
+    Contains the several types
+    of headers and buttons
+*/
+.sidebar {
+    background-color: #CCCCCC;
+    height: 100vh;
+    vertical-align: top;
+}
+
+.sideButton {
+    background-color: #00000000;
+    border: #00000000;
+    color: #303030;
+    margin: 3px;
+    margin-left: 80px;
+}
+
+.subTopicHeader {
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.largeTopicHeader {
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Scalable Images */
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utilized primarily in the coding sections, though also in Arduino and Vendor. */
+.codeBlock {
+    display: block;
+    justify-self: left;
+    align-items: left;
+
+    border-radius: 1em;
+    padding: 1%;
+    margin-left: 1%;
+
+    background-color: #BBBBBB;
+    font-family: "FiraCode";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* Fonts for Torque and Code Blocks */
+@font-face {
+    font-family: "FiraCode";
+    src: url("/fonts/fire_code_dynamic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MarketDeco";
+    src: url("/fonts/market_deco.ttf") format("truetype");
+}

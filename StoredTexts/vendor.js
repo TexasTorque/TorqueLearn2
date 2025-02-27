@@ -22,7 +22,7 @@ const vendor = {
                 "<p>The strips are super cheap, but the electronics are bulky and annoying sometimes. These are dead easy to program with Arduino though. They're not individually addressable because there's effectively no logic on board the strip, everything's just wired in parallel. That means these strips are cuttable, which is cool.</p>",
                 "<p>We're using these as a simple and cheap way to spice up our driver stations in the 2022 season.</p>",
 
-                "<h3>Hardware setup</h3>",
+                "<h3>Hardware setup</h3>", 
 
                 "<p>First, separate out each of the pads on the strip into a separate Arduino compatible male jumper. Then plug in three sockets on the Arduino (they must have the \"~\" PWM symbol next to them for this to work properly.) Just use the pins, 3, 5, and 6 on the Arduino UNO for now.</p>",
                 "<p>Then on the breadboard place three N-channel MOSFETS near the center, facing out away from the center. Give them some space between each other to make wiring easier. Position the breadboard so that the MOSFETS are lined up vertically in front of you with the longer \"tab\" part facing towards your right hand, and the darker short part facing to your left. Each of the MOSFETS controls one color.</p>",
@@ -33,13 +33,13 @@ const vendor = {
 
                 "<p>In the Arduino software first define three pins, make sure to match color to pin number. Keep in mind these are pre-processor directives, not variable declarations</p>",
 
-                "<pre></p>",
+                "<pre class='codeBlock'></p>",
                 "<p>#define RED 3</p>",
                 "<p>#define GREEN 5</p>",
                 "<p>#define BLUE 6</p>",
 
                 "<p>The default program should look something like</p>",
-                "<pre></p>",
+                "<pre class='codeBlock'></p>",
                 "<p>void setup() {</p>",
                 "<p>   // code here</p>",
                 "<p>}</p>",
@@ -50,7 +50,7 @@ const vendor = {
                 "</pre></p>",
     
                 "<p>First set the mode of each pin with</p>",
-                "<pre></p>",
+                "<pre class='codeBlock'>",
                 "<p>void setup() {</p>",
                 "<p>   pinMode(RED, OUTPUT);</p>",
                 "<p>   pinMode(GREEN, OUTPUT);</p>",
@@ -60,7 +60,7 @@ const vendor = {
                 
                 "<p>Then the loop function (which runs continuously) you can simply write an 8-bit RGB value (0-255) to each pin to change the color. For example...</p>",
                 
-                "<pre></p>",
+                "<pre class='codeBlock'>",
                 "<p>void loop() {</p>",
                 "<p>   analogWrite(RED, 0);</p>",
                 "<p>   analogWrite(GREEN, 255);</p>",
@@ -114,25 +114,25 @@ const vendor = {
             "<h3>Programming time</h3>",
             "<p>At the top of ANY NeoPixel file you'll need to \"import\" the library with the following. This gives you all the stuff you need to interface with the strip.",
             
-            "<pre>#include <Adafruit_NeoPixel.h></pre>",
+            "<pre class='codeBlock'>#include <Adafruit_NeoPixel.h></pre>",
 
             
             "<p>Also at the top of the file, you're going to want to do the following. Think of this as a fancy variable declaration. The compiler goes through and sees wherever \"DATA_PIN\" appears and replaces it with 6.",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>#define DATA_PIN 6 // change this to whatever data pin you need",
             "<p>#define PIXEL_COUNT 60 // number of LEDs on the strip",
             "</pre>",
             
             "<p>Finally in the global space, let's create the strip object as \"strip.\" Create more instances of strip as you need to control more strips separately.",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>Adafruit_NeoPixel strip(PIXEL_COUNT, DATA_PIN, NEO_GRB + NEO_KHZ800);",
             "</pre>",
             
             "<p>The rest of your program will probably look like the following at this point.",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void setup() {",
             "<p>   // code here",
             "<p>}",
@@ -143,7 +143,7 @@ const vendor = {
             
             
             "<p>In setup we want to run functions that don't return values we need for the rest of the program's operation. We want to tell Arduino to set the mode of the data pin to output, and run some setup functions for the strip itself. At the most basic level it should look like this.",
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void setup() {",
                 "<p>pinMode(DATA_PIN, OUTPUT);",
                 "<p>strip.begin();",
@@ -153,7 +153,7 @@ const vendor = {
             
             "<p>Then in loop, which runs as fast as the Arduino can manage automatically, we write code that sets the color of the strip. For example",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void loop() {",
                 "<p>// iterates through and sets every pixel to green (pixels.Color takes in an RGB value)",
                 "<p>for (int i = 0; i < PIXEL_COUNT; i++) {",
@@ -172,7 +172,7 @@ const vendor = {
             
             "<p>This code switches the color of the strip every 5 seconds. This doesn't really take advantage of the individual addressability of the LEDs. If you did want to do that you could do a color wipe with something like this, which sets a pixel every 10th of a second.",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>for (int i = 0; i < PIXEL_COUNT; i++) {",
             "<p>    strip.setPixelColor(i, pixels.Color(0, 255, 0))",
             "<p>    strip.show(); // show changes one pixel at a time",
@@ -204,7 +204,7 @@ const vendor = {
             
             "<p>When you open your first sketch, you will be met with something similar to the following.</p>",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void setup() {</p>",
             "<p>   // code here</p>",
             "<p>}</p>",
@@ -216,11 +216,11 @@ const vendor = {
             "<p>Let's dissect this. The space above setup is the global space. Anything you do there will happen once, and any variables declared here will be accessible in both `setup` and `loop`. Here's where you want to declare any variables that you'll be setting later. In `setup` we run stuff that only needs to be run once, and we don't need any data from it for the rest of the runtime of the program. `loop` is where most of the action happens. This is where we'll manage what the Arduino is taking for input/outputting, using everything we did in the global space and `setup`.</p>",
             
             "<p>Let's code our project. First, we need to set up a global variable to hold the state of the data pin the button is connected to. Then we can set this variable later without wasting the time it takes to declare the variable again every loop.</p>",
-            "<pre><p>bool name;</p></pre>",
+            "<pre class='codeBlock'><p>bool name;</p></pre>",
 
             "<p>Then in `setup`, we need to tell the Arduino to get ready to accept input from the button. We can do that with a call to `pinMode` and some automatically added global values. Oh, we also need to call `Serial.begin(9600)` to tell the Arduino to get ready to output whatever we print to the computer at a baud rate of 9600.</p>",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void setup() {</p>",
             "<p>    // arguments to pinMode are pin number and mode</p>",
             "<p>    // make sure to put whatever pin you hooked the</p>",
@@ -231,7 +231,7 @@ const vendor = {
             
             "<p>Then in the `loop` function, which is called as fast as the Arduino can manage, we need to `digitalRead` the value of the pin (whether the button is pressed or not) and manage it. We can use that global variable we set earlier.</p>",
             
-            "<pre>",
+            "<pre class='codeBlock'>",
             "<p>void loop() {</p>",
             "<p>   // use YOUR pin #</p></p>",
             "<p>   name = digitalRead(3);</p>",
@@ -262,7 +262,7 @@ const vendor = {
         "<h3>Programming</h3>",
         
         "<p>If you are writing your robot code in Java, you first need to have the following imports:</p>",
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;</p>",
         "<p>import edu.wpi.first.networktables.NetworkTable;</p>",
         "<p>import edu.wpi.first.networktables.NetworkTableEntry;</p>",
@@ -271,7 +271,7 @@ const vendor = {
         
         "<p>Next, you need to initialize the variables to hold your tv, tx, ty, and ta from NetworkTables. Here at Texas Torque, we have a singleton method that updates periodically every second, so we put our tx, ty, and ta inside our update method to get accurate and almost real-time values.</p>",
         
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>NetworkTable table = NetworkTableInstance.getDefault().getTable('limelight');</p>",
         "<p>NetworkTableEntry tx = table.getEntry('tx')</p>;",
         "<p>NetworkTableEntry ty = table.getEntry('ty');</p>",
@@ -287,7 +287,7 @@ const vendor = {
         "</pre>",
         
         "If you would like to change the LEDs on Limelight (on, off, blink), you can set them with another table. The last integer will change with 0 setting the LED Mode set in the current pipeline, 1 to force off, 2 to force blink, and 3 to force on.",
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>NetworkTableInstance.getDefault().getTable('imelight').getEntry('ledMode').forceSetNumber(3);</p>",
         "</pre>",
 
@@ -316,7 +316,7 @@ const vendor = {
         
         "<p>Here at Texas Torque, we utilize wrapper classes for motor controllers to handle our vendordeps, so we can write out TorqueSparkMax to define a SparkMax, VictorSPX for VictorSPXs, and TalonSRX for TalonSRXs. But for other teams, you can define your controller object class with either a PWMSparkMax, CANSparkMax, TalonSRX, VictorSP, or VictorSPX. Torque’s wrapper classes allow us to add a follower to a motor, so simply rewrite the motor name on a new line with the .addFollower command afterwards with the motor that you wish to have be a follower in parentheses. It is not necessary to define the follower motor; it will automatically be done.</p>",
         
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>TorqueSparkMax leftDB1 = new TorqueSparkMax(Ports.LEFT_DB_1);</p>",
         "<p>leftDB1.addFollower(Ports.LEFT_DB_2);</p>",
         "</pre>",
@@ -363,7 +363,7 @@ const vendor = {
     
         "<p>To program a pneumatic cylinder, you control the solenoid which controls the pneumatic device.</p>",
     
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>import edu.wpi.first.wpilibj.Solenoid;</p>",
         "<p>Solenoid solenoid = new Solenoid(PneumaticsModuleType.CTREPCM, Ports.SOLENOID);</p>",
         "<p>if (controller.getSolenoidButton()) solenoid.set(true);</p>",
@@ -525,13 +525,13 @@ const vendor = {
     
         "<p>We use the AHRS class for interfacing with the navX. The gyro can be instantiated with:</p>",
     
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>AHRS gyro = new AHRS(SPI.Port.kMXP);</p>",
         "</pre>",
     
         "<p>Below is a list of common methods:</p>",
     
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>double pitch = gyro.getPitch(); // Get the pitch</p>",
         "<p>double yaw = gyro.getYaw(); // Get the yaw</p>",
         "<p>double roll = gyro.getRoll(); // Get the roll</p>",

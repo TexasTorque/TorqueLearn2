@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/globalCSS.css">
+
+<!-- CSS File -->
+<link rel="stylesheet" href="/css.css">
+
 <head>
-    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="icon" href="/favicon.ico">
-    <title>Torque Learn</title>
-    <div class="header">
-        <h1>Torque Learn</h1>
-        <p>A Rookie's Guide to Texas Torque</p>
-    </div>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- Mathematical Functions-->
+    <link rel="icon" href="/imgs/favicon.ico"> <!-- Tab Icon -->
+    <title>Torque Learn</title> <!-- Tab Name -->
+
 </head>
+<!-- What does this do? I have no idea. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body style="margin: 0%; size: 100%;">
-    <table style="height: 100%; width: 100%;">
-        <tr>
-            <td class="sidebar"; style="margin: 2%;">
+<body style="margin: 0">
+    <table>
 
+        <!-- This works, and I have no idea why. I recommend not messing with it.-->
+        <colgroup>
+            <col span="1" style="width:10%;">
+            <col span="1" style="width:50%;">
+        </colgroup>
+
+        <!-- Header -->
+        <tr style="background-color: black; color: white">
+            <td style="text-align: center; border-radius: 1em;">
+                <h1 style="font-family: 'MarketDeco'">TEXAS TORQUE</h1>
+            </td>
+            <td style="align-content: center; border-radius: 1em;">
+                <div style="margin: 2%;">
+                    <h2>Torque Learn</h2>
+                    <p>A Rookie's Guide to Texas Torque</p>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Main Content -->
+        <tr>
+            <td class="sidebar" ; style="margin: 2%; border-radius: 1em;">
+
+                <!-- From here on out, this will be all buttons and headers on the sidebar. -->
                 <h2 class="largeTopicHeader">CAD</h2>
                 <div> <!-- CAD -->
 
@@ -30,85 +53,114 @@
                         <button onclick="changeText('CAD Projectiles')" class="sideButton">Projectiles</button><br>
                     </div>
 
-                    <button onclick="changeText('CAD Partial Derivatives')" class="sideButton" style="margin-left: 50px">Partial Derivatives</button><br>
+                    <button onclick="changeText('CAD Partial Derivatives')" class="sideButton"
+                        style="margin-left: 50px">Partial Derivatives</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Coding</h2>
                 <div> <!-- Coding -->
-                    <button onclick="changeText('Coding Basic Auto Setup')" class="sideButton">Basic Auto Setup</button><br>
-                    <button onclick="changeText('Coding Coding Standards')" class="sideButton">Coding Standards</button><br>
+                    <button onclick="changeText('Coding Basic Auto Setup')" class="sideButton">Basic Auto
+                        Setup</button><br>
+                    <button onclick="changeText('Coding Coding Standards')" class="sideButton">Coding
+                        Standards</button><br>
                     <button onclick="changeText('Coding Digital IO')" class="sideButton">Digital IO</button><br>
-                    <button onclick="changeText('Coding Jacks Plan for Success')" class="sideButton">Jack's Plan for Success</button><br>
+                    <button onclick="changeText('Coding Jacks Plan for Success')" class="sideButton">Jack's Plan for
+                        Success</button><br>
                     <button onclick="changeText('Coding Network Tables')" class="sideButton">Network Tables</button><br>
-                    <button onclick="changeText('Coding Project Structure')" class="sideButton">Project Structure</button><br>
+                    <button onclick="changeText('Coding Project Structure')" class="sideButton">Project
+                        Structure</button><br>
                     <button onclick="changeText('Coding Style Guide')" class="sideButton">Style Guide</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Control Loop</h2>
                 <div> <!-- Control Loop -->
                     <button onclick="changeText('Control Loop Bang-Bang')" class="sideButton">Bang-Bang</button><br>
-                    <button onclick="changeText('Control Loop Feed Forward')" class="sideButton">Feed Forward</button><br>
+                    <button onclick="changeText('Control Loop Feed Forward')" class="sideButton">Feed
+                        Forward</button><br>
                     <button onclick="changeText('Control Loop PID')" class="sideButton">PID</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Git Use</h2>
-                <div> <!-- Git Use --> 
-                    <button onclick="changeText('Git Use How to clone a repo')" class="sideButton">How to Clone a Repo</button><br>
-                    <button onclick="changeText('Git Use How to use vscode')" class="sideButton">How to use VSCode</button><br>
-                    <button onclick="changeText('Git Use Introductory Git')" class="sideButton">Introductory Git</button><br>
+                <div> <!-- Git Use -->
+                    <button onclick="changeText('Git Use How to clone a repo')" class="sideButton">How to Clone a
+                        Repo</button><br>
+                    <button onclick="changeText('Git Use How to use vscode')" class="sideButton">How to use
+                        VSCode</button><br>
+                    <button onclick="changeText('Git Use Introductory Git')" class="sideButton">Introductory
+                        Git</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Health/Safety</h2>
                 <div> <!-- Health/Safety -->
-                    <button onclick="changeText('Health/Safety Battery Safety')" class="sideButton">Battery Safety</button><br>
+                    <button onclick="changeText('Health/Safety Battery Safety')" class="sideButton">Battery
+                        Safety</button><br>
                     <button onclick="changeText('Health/Safety Posture')" class="sideButton">Posture</button><br>
-                    <button onclick="changeText('Health/Safety Visions and Screens')" class="sideButton">Visions and Screens</button><br>
+                    <button onclick="changeText('Health/Safety Visions and Screens')" class="sideButton">Visions and
+                        Screens</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Machining</h2>
                 <div> <!-- Machining -->
-                    <button onclick="changeText('Machining Tormach Door Replacement')" class="sideButton">Tormach Door Replacement</button><br>
+                    <button onclick="changeText('Machining Tormach Door Replacement')" class="sideButton">Tormach Door
+                        Replacement</button><br>
                     <button onclick="changeText('Machining What is CNC')" class="sideButton">What is CNC?</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Programming Setup</h2>
                 <div> <!-- Setup -->
-                    <button onclick="changeText('Programming Setup How to Install FRC Gametools')" class="sideButton">How to Install FRC Gametools</button><br>
-                    <button onclick="changeText('Programming Setup How to Install WPILib')" class="sideButton">How to install WPILib</button><br>
-                    <button onclick="changeText('Programming Setup How to install VSCode')" class="sideButton">How to install VSCode</button><br>
-                    <button onclick="changeText('Programming Setup How to use Liveshare')" class="sideButton">How to use Liveshare</button><br>
+                    <button onclick="changeText('Programming Setup How to Install FRC Gametools')"
+                        class="sideButton">How to Install FRC Gametools</button><br>
+                    <button onclick="changeText('Programming Setup How to Install WPILib')" class="sideButton">How to
+                        install WPILib</button><br>
+                    <button onclick="changeText('Programming Setup How to install VSCode')" class="sideButton">How to
+                        install VSCode</button><br>
+                    <button onclick="changeText('Programming Setup How to use Liveshare')" class="sideButton">How to use
+                        Liveshare</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Vendor</h2>
                 <div> <!-- Vendor -->
                     <h3 class="subTopicHeader">Arduino</h3>
                     <div>
-                        <button onclick="changeText('Arduino Controlling a 4 pin LED Strip')" class="sideButton">Controlling a 4 pin LED Strip</button><br>
-                        <button onclick="changeText('Arduino Controlling an Adata NeoPixel')" class="sideButton">Controlling an Adata NeoPixel</button><br>
-                        <button onclick="changeText('Arduino Starting Arduino')" class="sideButton">Starting Arduino</button><br>
+                        <button onclick="changeText('Arduino Controlling a 4 pin LED Strip')"
+                            class="sideButton">Controlling a 4 pin LED Strip</button><br>
+                        <button onclick="changeText('Arduino Controlling an Adata NeoPixel')"
+                            class="sideButton">Controlling an Adata NeoPixel</button><br>
+                        <button onclick="changeText('Arduino Starting Arduino')" class="sideButton">Starting
+                            Arduino</button><br>
                     </div>
-                    <button onclick="changeText('Vendor Limelight')" class="sideButton" style="margin-left: 50px">Limelight</button><br>
-                    <button onclick="changeText('Vendor Motor Controllers')" class="sideButton" style="margin-left: 50px">Motor Controllers</button><br>
-                    <button onclick="changeText('Vendor Motors and Motor Types')" class="sideButton" style="margin-left: 50px">Motors and Motor Types</button><br>
-                    <button onclick="changeText('Vendor Pneumatics and Solenoids')" class="sideButton" style="margin-left: 50px">Pneumatics and Solenoids</button><br>
-                    <button onclick="changeText('Vendor RoboRIO')" class="sideButton" style="margin-left: 50px">RoboRIO</button><br>
-                    <button onclick="changeText('Vendor Wifi Radio Configuration')" class="sideButton" style="margin-left: 50px">Wifi Radio Configuration</button><br>
-                    <button onclick="changeText('Vendor navX')" class="sideButton" style="margin-left: 50px">navX</button><br>
+                    <button onclick="changeText('Vendor Limelight')" class="sideButton"
+                        style="margin-left: 50px">Limelight</button><br>
+                    <button onclick="changeText('Vendor Motor Controllers')" class="sideButton"
+                        style="margin-left: 50px">Motor Controllers</button><br>
+                    <button onclick="changeText('Vendor Motors and Motor Types')" class="sideButton"
+                        style="margin-left: 50px">Motors and Motor Types</button><br>
+                    <button onclick="changeText('Vendor Pneumatics and Solenoids')" class="sideButton"
+                        style="margin-left: 50px">Pneumatics and Solenoids</button><br>
+                    <button onclick="changeText('Vendor RoboRIO')" class="sideButton"
+                        style="margin-left: 50px">RoboRIO</button><br>
+                    <button onclick="changeText('Vendor Wifi Radio Configuration')" class="sideButton"
+                        style="margin-left: 50px">Wifi Radio Configuration</button><br>
+                    <button onclick="changeText('Vendor navX')" class="sideButton"
+                        style="margin-left: 50px">navX</button><br>
                 </div>
 
-                <button onclick="changeText('Scouting')" class="sideButton" style="margin-left: 20px">Scouting</button><br>
-                <button onclick="changeText('How to Deploy Code to a Robot')" class="sideButton" style="margin-left: 20px">How to Deploy Code to a Robot</button><br>
+                <button onclick="changeText('Scouting')" class="sideButton"
+                    style="margin-left: 20px">Scouting</button><br>
+                <button onclick="changeText('How to Deploy Code to a Robot')" class="sideButton"
+                    style="margin-left: 20px">How to Deploy Code to a Robot</button><br>
             </td>
-            <td style="padding-left: 2%; padding-right: 2%; padding-top: 1; vertical-align: top;">    
+            <td style="padding-left: 2%; padding-right: 2%; padding-top: 1; vertical-align: top;">
                 <h1 id="topicHeader">Torque Learn</h3>
-                <p id="topicText", style="vertical-align: top;">
-                    Choose a selection on the side to go to a tab.
-                </p>
+                    <p id="topicText" , style="vertical-align: top;">
+                        Choose a selection on the side to go to a tab.
+                    </p>
             </td>
         </tr>
-    </table> 
-</body> 
+    </table>
+</body>
 
+<!-- Imports for Text -->
 <script src="StoredTexts/CAD.js"></script>
 <script src="StoredTexts/coding.js"></script>
 <script src="StoredTexts/ControlLoops.js"></script>
@@ -119,6 +171,7 @@
 <script src="StoredTexts/programmingSetup.js"></script>
 <script src="StoredTexts/vendor.js"></script>
 
+<!-- Fetching texts -->
 <script>
     function changeText(id) {
         switch (id) {
@@ -151,7 +204,7 @@
                 document.getElementById("topicHeader").innerHTML = "CAD Partial Derivatives";
                 document.getElementById("topicText").innerHTML = cad.partial_derivatives.join("");
                 break;
-            
+
             // Coding
             case "Coding Basic Auto Setup":
                 document.getElementById("topicHeader").innerHTML = "Coding Basic Auto Setup";
@@ -296,13 +349,24 @@
                 document.getElementById("topicHeader").innerHTML = "Deploy and run code on a robot";
                 document.getElementById("topicText").innerHTML = misc.deploy_code.join("");
                 break;
+
             default:
+                // Shouldn't ever run, but just in case.
                 document.getElementById("topicHeader").innerHTML = "?????"
                 document.getElementById("topicText").innerHTML = "How did you even get here."
                 break;
         }
+
+        // Refreshes the mathematic source to render any new formulas (which nearly every page has).
         if (window.MathJax) {
             MathJax.typeset();
         }
     }
 </script>
+
+<!--
+    Authored by Davis Jenney (2024-2027)
+    The Academy of Science and Technology 
+    Texas Torque Research and Problem Project
+    Started 2/13/2024, Finished 2/25/2024
+-->

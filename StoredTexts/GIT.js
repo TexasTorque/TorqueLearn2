@@ -2,7 +2,7 @@ const git = {
     how_to_clone: [
         "<p>A TexasTorque Repository is structured very specifically. Here is a high-level overview of important directories and files in a repo.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>├── build.gradle</p>",
         "<p>├── gradle</p>",
         "<p>├── gradlew</p>",

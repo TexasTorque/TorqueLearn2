@@ -10,31 +10,24 @@ const coding = {
 
         "<p>To write a command, you first need to make a new file inside of the command folder which should be inside of the auto folder. Every command needs to extend the main Command class, and because Command.java has required methods to be overridden, they should be autofilled into your new command file. (Code 1) These methods are init(), continuous(), endCondition(), and end(). In addition to these you should also write out a constructor for your command. If you have variables that you want to be passed into your command from a sequence, you should first define them at the top of your class. In the constructor, pass those variables in the parameters and then set each variable with this.  = the variable inside of the constructor.(Code 2) The next thing to write out is the init(), or initialization function. Override public void init(), and then write out the code that you want to have run one time once the command gets called.(Code 3) Do the same for continuous(), but instead put the code that you want to have continuously happen over and over again inside of it. Do the same for public boolean endCondition and put the if statement inside of it and return the condition. (It should be false until you have a condition that will decide if the command can end). Lastly, override end() and write out the code that should run one time once the command ends.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "public class DriveForTime extends Command {}",
         "</pre>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public DriveForTime(double speed, double length) {</p>",
         "<p>    this.speed = speed;</p>",
         "<p>    this.length = length;</p>",
         "<p>}",
         "</pre>",
 
-        "<pre>",
-        "<p>@Override</p>",
-        "<p>public void init() {</p>",
-        "<p>    start = Timer.getFPGATimestamp();</p>",
-        "<p>    Input.getInstance().getDrivebaseInput().setLeftSpeed(speed);</p>",
-        "<p>    Input.getInstance().getDrivebaseInput().setRightSpeed(speed);</p>",
-        "<p>}</p>",
-        "</pre>",
+
 
         "<h3>Writing Sequences</h3>",
 
         "<p>To write a sequence, you need to first create a new sequence inside of the sequence folder inside of the auto folder. Define the package at the top of the file and then extend the Sequence class in the class declaration. Just like Command, there are required methods to be overridden, so ensure that you are overriding public void init(). Inside of init, you call blocks that are full of commands. The init() function will run all of the blocks that you call inside of it, and you are able to have multiple blocks in each sequence. After the method is called in init(), define the method outside of init() with a void return type. The first line of the block should contain a new ArrayList of the type Command. The next line can then have the name of the ArrayList '.add(', and then write out 'new”, the name of a command, '(' the numbers to be passed in as parameters for the command, and then '));”. The next line just needs 'addBlock()”, with the name of the ArrayList inside of the parenthesis.(Code 4)</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public class DriveForTimeSequence() {</p>",
         "<p>   ArrayList<Command> a = new ArrayList<Command>(); // ArrayList<Command> constructors everything in commands folder</p>",
         "<p>   a.add(new DriveForTime(.5, .25, .25)); // Goes forward at 25% power for .5 second</p>",
@@ -69,7 +62,7 @@ const coding = {
 
         "<p>Except for really long function declarations</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public class Example() {</p>",
         "<p>    public static void main(String[] args) {</p>",
         "<p>        if (args.length > 5) {</p>",
@@ -83,7 +76,7 @@ const coding = {
 
         "<p>Examples of how to deal with long lines. This doesn't matter too much, you can do it many ways.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public static ArrayList<String> reallyLongFunction(double thisArgument, </p>",
         "<p>    const String thatArgument, ThisClass anArgument) {</p>",
         "<p>}</p>",
@@ -91,7 +84,7 @@ const coding = {
 
         '<br>',
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// This is one of the only time to put</p>",
         "<p>// the curly brace on the next line</p>",
 
@@ -106,17 +99,17 @@ const coding = {
         "<h4>Constants are named in screaming case</h4>",
 
 
-        "<pre><p>String THIS_IS_SCREAMING_CASE = 'Helicopter';</p></pre>",
+        "<pre class='codeBlock'><p>String THIS_IS_SCREAMING_CASE = 'Helicopter';</p></pre>",
 
 
         "<h4>Classes start with a capital letter, variables start with lower case</h4>",
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>ThisIsAClass thisIsAVariable = new ThisIsAClass();</p>",
         "</pre>",
 
         "<h4>Use JavaDoc when you can</h4>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>/*</p>",
         "<p>* This says what the functions does</p>",
         "<p>*</p>",
@@ -140,13 +133,13 @@ const coding = {
         "<p>First, import the DigitalOutput class from wpilib as shown below.</p>",
 
         "<br>",
-        "<pre><p>import edu.wpi.first.wpilibj.DigitalOutput;</p></pre>",
+        "<pre class='codeBlock'><p>import edu.wpi.first.wpilibj.DigitalOutput;</p></pre>",
         "<br>",
 
         "<p>Then, set up your instances</p>",
 
         "<br>",
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>DigitalOutput a;</p>",
         "<p>DigitalOutput b;</p>",
 
@@ -160,7 +153,7 @@ const coding = {
 
         "<p>Then, in another method, set the state of your DIO pins with booleans.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public method() {</p>",
         "<p>    a.set(true);</p>",
         "<p>    b.set(false);</p>",
@@ -172,14 +165,14 @@ const coding = {
 
         "<p>To make sure we aren't constantly re-declaring variables, let's define some booleans globally.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>bool thing;</p>",
         "<p>bool that;</p>",
         "</pre>",
 
         "<p>First in `setup`, set your pin modes</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// pins here don't have to be the same</p>",
         "<p>// as the ones on the RoboRIO</p>",
         "<p>// as long as they are physically</p>",
@@ -192,7 +185,7 @@ const coding = {
         "<p>Then in `loop` we can do what we need.</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// make sure the pins are the same</p>",
         "<p>// as the ones you set the mode</p>",
         "<p>// on</p></p>",
@@ -240,7 +233,7 @@ const coding = {
 
         "<p>Including the header:</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>#include \"networktables/NetworkTable.h\"</p>",
         "<p>#include \"networktables/NetworkTableInstance.h\"</p>",
         "</pre>",
@@ -249,7 +242,7 @@ const coding = {
         "<p>Instatiating object and setup:</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>auto ntinst = nt::NetworkTableInstance::GetDefault();</p>",
         "<p>// attempts to establish connection to server</p>",
         "<p>// over common IPs based on team number</p>",
@@ -263,7 +256,7 @@ const coding = {
         "<p>Manipulating a table:</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// grab the table by name</p>",
         "<p>// this is a ptr</p>",
         "<p>// so you have to use</p>",
@@ -283,7 +276,7 @@ const coding = {
         "<p>Imports:</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>import edu.wpi.first.networktables.NetworkTable;</p>",
         "<p>import edu.wpi.first.networktables.NetworkTableEntry;</p>",
         "<p>import edu.wpi.first.networktables.NetworkTableInstance;</p>",
@@ -293,7 +286,7 @@ const coding = {
         "<p>Instantiate and setup:</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// should work fine in most cases</p>",
         "<p>NetworkTableInstance ntinst = NetworkTableInstance.getDefault();</p>",
         "<p>// setup/start the client</p>",
@@ -305,7 +298,7 @@ const coding = {
         "<p>Maniupulating a table:</p>",
         "<br>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>// grab the table</p>",
         "<p>NetworkTable table = ntinst.getTable(\"tbl\");</p>",
         "<p>NetworkTableEntry one = table.getEntry(\"entryuwu\");</p>",
@@ -324,7 +317,7 @@ const coding = {
 
         "<p>The Inputs folder has the Inputs.java file. First, at the top of the input file, are where the default speeds and booleans are set, usually 0 and false respectively. We make a variable called controller, which represents our Xbox One controller. With controller, we can actually see what buttons are being pressed, and we can specify what the robot should do if a specific button is pressed.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>boolean shootingSequence = false;</p>",
 
         "<p>if (controller.getLeftTrigger()) {</p>",
@@ -338,11 +331,12 @@ const coding = {
         "<h2>Contents</h2>",
 
         "<ul>",
-        "<il>* <a href=\"#file-struture\">File Struture</a></li>",
-        "<il>* <a href=\"#formatting\">Formatting</a></li>",
-        "<il>* <a href=\"#naming\">Naming</a></li>",
-        "<il>* <a href=\"#programming-practices\">Programming Practices</a></li>",
-        "<il>* <a href=\"#javadoc\">Javadoc</a></li>",
+        "<li><a href=\"#file-struture\">File Struture</a></li>",
+        "<li><a href=\"#formatting\">Formatting</a></li>",
+        "<li><a href=\"#naming\">Naming</a></li>",
+        "<li><a href=\"#programming-practices\">Programming Practices</a></li>",
+        "<li><a href=\"#javadoc\">Javadoc</a></li>",
+        "</ul>",
 
         "<h2 id=/file-structure>File Struture</h2>",
 
@@ -390,7 +384,7 @@ const coding = {
 
         "<p>You don't need to worry about too much formatting because we use Clang-Format. The Texas Torque Clang-Format for Java is specified as below:</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>Language: Java</p>",
         "<p>AlignConsecutiveAssignments: false</p>",
         "<p>AlignConsecutiveDeclarations: false</p>",
@@ -475,7 +469,7 @@ const coding = {
 
         "<p>Block comments are indented at the same level as the surrounding code. They may be in <code>/* ... */</code> style or <code>// ...</code> style. For multi-line <code>/* ... */</code> comments, subsequent lines must start with <code>*</code> aligned with the <code>*</code> on the previous line.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>/*</p>",
         "<p>* This is          // And so           /* Or you can</p>",
         "<p>* okay.            // is this.          * even do this. */</p>",
@@ -491,10 +485,10 @@ const coding = {
         "<p>Invalid names:",
 
         "<ul>",
-        "<il>`name_`</il>",
-        "<il>`mName`</il>",
-        "<il>`s_name`</il>",
-        "<il>`kName`</il>",
+        "<li>`name_`</li>",
+        "<li>`mName`</li>",
+        "<li>`s_name`</li>",
+        "<li>`kName`</li>",
 
         "<p>WPILib loves to use the `mInstanceVariable` and `kConstantOrEnum` bullshit, we do not.",
 
@@ -588,7 +582,7 @@ const coding = {
 
         "<p>The basic formatting of Javadoc blocks is as seen in this example:",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>/**",
         "<p>* Multiple lines of Javadoc text are written here,",
         "<p>* wrapped normally...",
@@ -598,7 +592,7 @@ const coding = {
 
         "<p>... or in this single-line example:",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>/** An especially short bit of Javadoc. */",
         "</pre>",
 
@@ -613,8 +607,8 @@ const coding = {
         "<p>At the minimum, Javadoc is present for every public class, and every public or protected member of such a class, with a few exceptions:",
 
         "<ul>",
-        "<il>* Javadoc is optional for \"simple, obvious\" members like `getFoo()`, in cases where there really and truly is nothing else worthwhile to say but \"Returns the foo\".</il>",
-        "<il>* Javadoc is not always present on a method that overrides a supertype method.</il>"
+        "<li>* Javadoc is optional for \"simple, obvious\" members like `getFoo()`, in cases where there really and truly is nothing else worthwhile to say but \"Returns the foo\".</li>",
+        "<li>* Javadoc is not always present on a method that overrides a supertype method.</li>"
     ]
 
 }
