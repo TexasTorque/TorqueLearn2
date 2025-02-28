@@ -12,3 +12,6 @@ Take care to include the -g argument, as this makes the http-server command work
 The server does NOT need to be restarted upon file changes to the host. The website will utilize the new information upon a user refreshing the website.
 
 To launch, run "http-server" in the file directory. The website can then be access using localhost, the host device's local IP, or the host devices' global IP. (Converting this to a URL instead of an IP is in progress.)
+
+# Authors
+[Davis Jenney](https://github.com/OrangeTurtle77) (2023-2027)

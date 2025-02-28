@@ -6,7 +6,7 @@ const controlLoops = {
 
         "<p>Imagine you have a variable `pos` that is the current position of something.</p>",
 
-        "<pre>",
+        "<pre class='codeBlock'>",
         "<p>public void bang_bang(pos: int) {</p>",
         "<p>    if pos != 100 {</p>",
         "<p>        // Move to position</p>",
