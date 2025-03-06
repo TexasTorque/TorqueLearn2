@@ -20,6 +20,7 @@
     color: #303030;
     margin: 3px;
     margin-left: 80px;
+    cursor: pointer;
 }
 
 .subTopicHeader {
@@ -65,4 +66,41 @@
 @font-face {
     font-family: "MarketDeco";
     src: url("/fonts/market_deco.ttf") format("truetype");
+}
+
+.transition {
+    z-index: 1;
+    fill: black;
+    
+    opacity: 1;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;   
+}
+
+.fadeIn {
+    animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation:fadeOut 0.5s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

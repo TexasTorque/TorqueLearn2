@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="/css.css">
 
 <head>
-    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- Mathematical Functions-->
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Mathematical Functions-->
     <link rel="icon" href="/imgs/favicon.ico"> <!-- Tab Icon -->
     <title>Torque Learn</title> <!-- Tab Name -->
 
@@ -13,9 +14,8 @@
 <!-- What does this do? I have no idea. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body style="margin: 0">
+<body style="margin: 0" id="body">
     <table>
-
         <!-- This works, and I have no idea why. I recommend not messing with it.-->
         <colgroup>
             <col span="1" style="width:10%;">
@@ -45,76 +45,76 @@
 
                     <h3 class="subTopicHeader">Design Derivations</h3>
                     <div> <!-- Design Derivations -->
-                        <button onclick="changeText('CAD Gears')" class="sideButton">Gears</button><br>
-                        <button onclick="changeText('CAD Ropes')" class="sideButton">Ropes</button><br>
-                        <button onclick="changeText('CAD Belts')" class="sideButton">Belts</button><br>
-                        <button onclick="changeText('CAD Arms')" class="sideButton">Arms</button><br>
-                        <button onclick="changeText('CAD Elevators')" class="sideButton">Elevators</button><br>
-                        <button onclick="changeText('CAD Projectiles')" class="sideButton">Projectiles</button><br>
+                        <button onclick="updateTextPanel('CAD Gears')" class="sideButton">Gears</button><br>
+                        <button onclick="updateTextPanel('CAD Ropes')" class="sideButton">Ropes</button><br>
+                        <button onclick="updateTextPanel('CAD Belts')" class="sideButton">Belts</button><br>
+                        <button onclick="updateTextPanel('CAD Arms')" class="sideButton">Arms</button><br>
+                        <button onclick="updateTextPanel('CAD Elevators')" class="sideButton">Elevators</button><br>
+                        <button onclick="updateTextPanel('CAD Projectiles')" class="sideButton">Projectiles</button><br>
                     </div>
 
-                    <button onclick="changeText('CAD Partial Derivatives')" class="sideButton"
+                    <button onclick="updateTextPanel('CAD Partial Derivatives')" class="sideButton"
                         style="margin-left: 50px">Partial Derivatives</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Coding</h2>
                 <div> <!-- Coding -->
-                    <button onclick="changeText('Coding Basic Auto Setup')" class="sideButton">Basic Auto
+                    <button onclick="updateTextPanel('Coding Basic Auto Setup')" class="sideButton">Basic Auto
                         Setup</button><br>
-                    <button onclick="changeText('Coding Coding Standards')" class="sideButton">Coding
+                    <button onclick="updateTextPanel('Coding Coding Standards')" class="sideButton">Coding
                         Standards</button><br>
-                    <button onclick="changeText('Coding Digital IO')" class="sideButton">Digital IO</button><br>
-                    <button onclick="changeText('Coding Jacks Plan for Success')" class="sideButton">Jack's Plan for
+                    <button onclick="updateTextPanel('Coding Digital IO')" class="sideButton">Digital IO</button><br>
+                    <button onclick="updateTextPanel('Coding Jacks Plan for Success')" class="sideButton">Jack's Plan for
                         Success</button><br>
-                    <button onclick="changeText('Coding Network Tables')" class="sideButton">Network Tables</button><br>
-                    <button onclick="changeText('Coding Project Structure')" class="sideButton">Project
+                    <button onclick="updateTextPanel('Coding Network Tables')" class="sideButton">Network Tables</button><br>
+                    <button onclick="updateTextPanel('Coding Project Structure')" class="sideButton">Project
                         Structure</button><br>
-                    <button onclick="changeText('Coding Style Guide')" class="sideButton">Style Guide</button><br>
+                    <button onclick="updateTextPanel('Coding Style Guide')" class="sideButton">Style Guide</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Control Loop</h2>
                 <div> <!-- Control Loop -->
-                    <button onclick="changeText('Control Loop Bang-Bang')" class="sideButton">Bang-Bang</button><br>
-                    <button onclick="changeText('Control Loop Feed Forward')" class="sideButton">Feed
+                    <button onclick="updateTextPanel('Control Loop Bang-Bang')" class="sideButton">Bang-Bang</button><br>
+                    <button onclick="updateTextPanel('Control Loop Feed Forward')" class="sideButton">Feed
                         Forward</button><br>
-                    <button onclick="changeText('Control Loop PID')" class="sideButton">PID</button><br>
+                    <button onclick="updateTextPanel('Control Loop PID')" class="sideButton">PID</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Git Use</h2>
                 <div> <!-- Git Use -->
-                    <button onclick="changeText('Git Use How to clone a repo')" class="sideButton">How to Clone a
+                    <button onclick="updateTextPanel('Git Use How to clone a repo')" class="sideButton">How to Clone a
                         Repo</button><br>
-                    <button onclick="changeText('Git Use How to use vscode')" class="sideButton">How to use
+                    <button onclick="updateTextPanel('Git Use How to use vscode')" class="sideButton">How to use
                         VSCode</button><br>
-                    <button onclick="changeText('Git Use Introductory Git')" class="sideButton">Introductory
+                    <button onclick="updateTextPanel('Git Use Introductory Git')" class="sideButton">Introductory
                         Git</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Health/Safety</h2>
                 <div> <!-- Health/Safety -->
-                    <button onclick="changeText('Health/Safety Battery Safety')" class="sideButton">Battery
+                    <button onclick="updateTextPanel('Health/Safety Battery Safety')" class="sideButton">Battery
                         Safety</button><br>
-                    <button onclick="changeText('Health/Safety Posture')" class="sideButton">Posture</button><br>
-                    <button onclick="changeText('Health/Safety Visions and Screens')" class="sideButton">Visions and
+                    <button onclick="updateTextPanel('Health/Safety Posture')" class="sideButton">Posture</button><br>
+                    <button onclick="updateTextPanel('Health/Safety Visions and Screens')" class="sideButton">Visions and
                         Screens</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Machining</h2>
                 <div> <!-- Machining -->
-                    <button onclick="changeText('Machining Tormach Door Replacement')" class="sideButton">Tormach Door
+                    <button onclick="updateTextPanel('Machining Tormach Door Replacement')" class="sideButton">Tormach Door
                         Replacement</button><br>
-                    <button onclick="changeText('Machining What is CNC')" class="sideButton">What is CNC?</button><br>
+                    <button onclick="updateTextPanel('Machining What is CNC')" class="sideButton">What is CNC?</button><br>
                 </div>
 
                 <h2 class="largeTopicHeader">Programming Setup</h2>
                 <div> <!-- Setup -->
-                    <button onclick="changeText('Programming Setup How to Install FRC Gametools')"
+                    <button onclick="updateTextPanel('Programming Setup How to Install FRC Gametools')"
                         class="sideButton">How to Install FRC Gametools</button><br>
-                    <button onclick="changeText('Programming Setup How to Install WPILib')" class="sideButton">How to
+                    <button onclick="updateTextPanel('Programming Setup How to Install WPILib')" class="sideButton">How to
                         install WPILib</button><br>
-                    <button onclick="changeText('Programming Setup How to install VSCode')" class="sideButton">How to
+                    <button onclick="updateTextPanel('Programming Setup How to install VSCode')" class="sideButton">How to
                         install VSCode</button><br>
-                    <button onclick="changeText('Programming Setup How to use Liveshare')" class="sideButton">How to use
+                    <button onclick="updateTextPanel('Programming Setup How to use Liveshare')" class="sideButton">How to use
                         Liveshare</button><br>
                 </div>
 
@@ -122,39 +122,41 @@
                 <div> <!-- Vendor -->
                     <h3 class="subTopicHeader">Arduino</h3>
                     <div>
-                        <button onclick="changeText('Arduino Controlling a 4 pin LED Strip')"
+                        <button onclick="updateTextPanel('Arduino Controlling a 4 pin LED Strip')"
                             class="sideButton">Controlling a 4 pin LED Strip</button><br>
-                        <button onclick="changeText('Arduino Controlling an Adata NeoPixel')"
+                        <button onclick="updateTextPanel('Arduino Controlling an Adata NeoPixel')"
                             class="sideButton">Controlling an Adata NeoPixel</button><br>
-                        <button onclick="changeText('Arduino Starting Arduino')" class="sideButton">Starting
+                        <button onclick="updateTextPanel('Arduino Starting Arduino')" class="sideButton">Starting
                             Arduino</button><br>
                     </div>
-                    <button onclick="changeText('Vendor Limelight')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor Limelight')" class="sideButton"
                         style="margin-left: 50px">Limelight</button><br>
-                    <button onclick="changeText('Vendor Motor Controllers')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor Motor Controllers')" class="sideButton"
                         style="margin-left: 50px">Motor Controllers</button><br>
-                    <button onclick="changeText('Vendor Motors and Motor Types')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor Motors and Motor Types')" class="sideButton"
                         style="margin-left: 50px">Motors and Motor Types</button><br>
-                    <button onclick="changeText('Vendor Pneumatics and Solenoids')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor Pneumatics and Solenoids')" class="sideButton"
                         style="margin-left: 50px">Pneumatics and Solenoids</button><br>
-                    <button onclick="changeText('Vendor RoboRIO')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor RoboRIO')" class="sideButton"
                         style="margin-left: 50px">RoboRIO</button><br>
-                    <button onclick="changeText('Vendor Wifi Radio Configuration')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor Wifi Radio Configuration')" class="sideButton"
                         style="margin-left: 50px">Wifi Radio Configuration</button><br>
-                    <button onclick="changeText('Vendor navX')" class="sideButton"
+                    <button onclick="updateTextPanel('Vendor navX')" class="sideButton"
                         style="margin-left: 50px">navX</button><br>
                 </div>
 
-                <button onclick="changeText('Scouting')" class="sideButton"
+                <button onclick="updateTextPanel('Scouting')" class="sideButton"
                     style="margin-left: 20px">Scouting</button><br>
-                <button onclick="changeText('How to Deploy Code to a Robot')" class="sideButton"
+                <button onclick="updateTextPanel('How to Deploy Code to a Robot')" class="sideButton"
                     style="margin-left: 20px">How to Deploy Code to a Robot</button><br>
             </td>
             <td style="padding-left: 2%; padding-right: 2%; padding-top: 1; vertical-align: top;">
-                <h1 id="topicHeader">Torque Learn</h3>
+                <div class="transition" id="transition">
+                    <h1 id="topicHeader">Torque Learn</h1>
                     <p id="topicText" , style="vertical-align: top;">
                         Choose a selection on the side to go to a tab.
                     </p>
+                </div>
             </td>
         </tr>
     </table>
@@ -173,7 +175,26 @@
 
 <!-- Fetching texts -->
 <script>
-    function changeText(id) {
+
+    function updateTextPanel(id) {
+
+        const element = document.getElementById("transition");
+        
+        element.classList.add("fadeOut");
+        element.addEventListener("animationend", () => {
+            element.classList.remove("fadeOut");
+            
+            getText(id);
+            
+            element.classList.add("fadeIn");
+            element.addEventListener("animationend", () => {
+                element.classList.remove("fadeIn");
+            })
+        })       
+
+    }
+
+    function getText(id) {
         switch (id) {
             // CAD
             case "CAD Gears":
