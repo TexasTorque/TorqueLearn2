@@ -159,8 +159,9 @@
                 </div>
             </td>
         </tr>
-    </table>
-</body>
+    </table> 
+</body> 
+
 
 <!-- Imports for Text -->
 <script src="StoredTexts/CAD.js"></script>
@@ -172,6 +173,7 @@
 <script src="StoredTexts/misc.js"></script>
 <script src="StoredTexts/programmingSetup.js"></script>
 <script src="StoredTexts/vendor.js"></script>
+
 
 <!-- Fetching texts -->
 <script>
@@ -225,7 +227,6 @@
                 document.getElementById("topicHeader").innerHTML = "CAD Partial Derivatives";
                 document.getElementById("topicText").innerHTML = cad.partial_derivatives.join("");
                 break;
-
             // Coding
             case "Coding Basic Auto Setup":
                 document.getElementById("topicHeader").innerHTML = "Coding Basic Auto Setup";
@@ -371,7 +372,7 @@
                 document.getElementById("topicText").innerHTML = misc.deploy_code.join("");
                 break;
 
-            default:
+          default:
                 // Shouldn't ever run, but just in case.
                 document.getElementById("topicHeader").innerHTML = "?????"
                 document.getElementById("topicText").innerHTML = "How did you even get here."
