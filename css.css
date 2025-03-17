@@ -15,11 +15,15 @@
 }
 
 .sideButton {
-    background-color: #00000000;
-    border: #00000000;
-    color: #303030;
     margin: 3px;
     margin-left: 80px;
+}
+
+.button {
+    background-color: #00000000;
+    border: #00000000;
+    color: inherit;
+    cursor: pointer;
 }
 
 .subTopicHeader {
@@ -66,3 +70,109 @@
     font-family: "MarketDeco";
     src: url("/fonts/market_deco.ttf") format("truetype");
 }
+
+.transition {
+    z-index: 1;
+    fill: black;
+    
+    opacity: 1;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;   
+}
+
+.fadeIn {
+    animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation:fadeOut 0.5s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.sidebarDark {
+    background-color: #212121;
+}
+
+.darkAnim {
+    animation: intoDarkMode 1s ease;
+}
+
+.sidebarDarkAnim {
+    animation: sidebarIntoDarkMode 1s ease;
+}
+
+@keyframes intoDarkMode {
+    from {
+        background-color: white;
+        color: black;
+    }
+    to {
+        background-color: #121212;
+        color: white;
+    }
+}
+
+@keyframes sidebarIntoDarkMode {
+    from {
+        background-color: #CCCCCC;
+    }
+    to {
+        background-color: #212121;
+    }
+}
+
+.lightAnim {
+    animation: intoLightMode 1s ease;
+}
+
+
+
+@keyframes intoLightMode {
+    from {
+        background-color: #212121;
+        color: white;
+    }
+    to {
+        background-color: white;
+        color: black;
+    }
+}
+
+.sidebarLightAnim {
+    animation: sidebarIntoLightMode 1s ease;
+}
+
+@keyframes sidebarIntoLightMode {
+    from {
+        background-color: #212121;
+    }
+    to {
+        background-color: #CCCCCC;
+    }
+}
+
