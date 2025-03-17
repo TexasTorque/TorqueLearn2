@@ -15,11 +15,14 @@
 }
 
 .sideButton {
-    background-color: #00000000;
-    border: #00000000;
-    color: #303030;
     margin: 3px;
     margin-left: 80px;
+}
+
+.button {
+    background-color: #00000000;
+    border: #00000000;
+    color: inherit;
     cursor: pointer;
 }
 
@@ -104,3 +107,72 @@
         opacity: 0;
     }
 }
+
+
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.sidebarDark {
+    background-color: #212121;
+}
+
+.darkAnim {
+    animation: intoDarkMode 1s ease;
+}
+
+.sidebarDarkAnim {
+    animation: sidebarIntoDarkMode 1s ease;
+}
+
+@keyframes intoDarkMode {
+    from {
+        background-color: white;
+        color: black;
+    }
+    to {
+        background-color: #121212;
+        color: white;
+    }
+}
+
+@keyframes sidebarIntoDarkMode {
+    from {
+        background-color: #CCCCCC;
+    }
+    to {
+        background-color: #212121;
+    }
+}
+
+.lightAnim {
+    animation: intoLightMode 1s ease;
+}
+
+
+
+@keyframes intoLightMode {
+    from {
+        background-color: #212121;
+        color: white;
+    }
+    to {
+        background-color: white;
+        color: black;
+    }
+}
+
+.sidebarLightAnim {
+    animation: sidebarIntoLightMode 1s ease;
+}
+
+@keyframes sidebarIntoLightMode {
+    from {
+        background-color: #212121;
+    }
+    to {
+        background-color: #CCCCCC;
+    }
+}
+
